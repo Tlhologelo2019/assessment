@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Clothing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+    
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo with Image -->
+                <div class="logo">
+                    <img src="../images/optimized_large_thumb_stage.jpg" alt="Your Logo">
+                </div>
+                <!-- Navigation with Icons -->
+                <nav class="d-flex align-items-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="home.html" class="nav-link text-white">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link text-white dropdown-toggle" id="productsDropdown" data-toggle="dropdown">
+                                <i class="fas fa-box-open"></i> Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <li><a href="female.html" class="dropdown-item">Female</a></li>
+                                <li><a href="male.html" class="dropdown-item">Male</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">
+                                <i class="fas fa-envelope"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <li class="view-cart">
+                        <a href="cart.html" class="btn btn-primary ml-auto" id="view-cart">
+                            <i class="fas fa-shopping-cart"></i> View Cart
+                        </a>
+                    </li>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+       
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row" id="product-list">
+            <!-- Product items will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <div>
+            <p className="text-lg">Get in touch with us:</p>
+        </div>
+        <p>
+            <i class="fas fa-envelope"></i> tlhologeloedward@gmail.com | 
+            <i class="fas fa-phone"></i> +27 60 6733 902 |
+            <a href="https://www.facebook.com/yourprofile" class="text-white me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/Tlholo2019" class="text-white me-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/tlhologelo55" class="text-white me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+   
+    </p>
+    </footer>
+
+    <script src="../JavaScript/female.js"></script>
+</body>
+</html>
