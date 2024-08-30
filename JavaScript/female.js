@@ -1,6 +1,6 @@
 const products = [
-    { id: 7, name: "1", price: 3500.00, image: "../images/dress.jpg" },
-    { id: 8, name: "2", price: 3449.00, image: "../images/dress2.jpg" }, 
+    { id: 7, name: "1", price: 1500.00, image: "../images/dress.jpg" },
+    { id: 8, name: "2", price: 2449.00, image: "../images/dress2.jpg" }, 
     { id: 9, name: "3", price: 2600.00, image: "../images/dress3.jpg" },
     { id: 10, name: "4", price: 2600.00, image: "../images/dress4.jpg" },
     { id: 11, name: "4", price: 2600.00, image: "../images/dress5.jpg" },

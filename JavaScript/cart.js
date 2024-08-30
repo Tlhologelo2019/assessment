@@ -28,15 +28,14 @@ function displayCart() {
                 <h5>${item.name}</h5>
                 <p>R${(item.price * item.quantity).toFixed(2)}</p>
                 <p>Quantity: ${item.quantity}</p>
+                <button onclick="addQuantity(${item.id})">Add</button>
                 <button onclick="removeFromCart(${item.id})">Remove</button>
             `;
             cartItems.appendChild(cartItem);
 
-            // Calculate total price
             total += item.price * item.quantity;
         });
 
-        // Display the total price
         totalPriceElement.textContent = total.toFixed(2);
     }
 }
@@ -48,5 +47,14 @@ function removeFromCart(productId) {
     displayCart();
 }
 
-// Initialize cart display on page load
+//Function to add quantity of an item in the cart
+function addQuantity(productId) {
+    const item = cart.find(item => item.id === productId);
+    if(item) {
+        item.quantity += 1
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    }
+}
+
 displayCart();

@@ -25,6 +25,15 @@ function displayProducts(productArray) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.getElementById('navbar');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (currentPage === 'female.html') {
+        navbar.style.backgroundColor = 'pink';
+    }
+});
+
 function addToCart(productId) {
     const product = products.find(prod => prod.id === productId);
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
