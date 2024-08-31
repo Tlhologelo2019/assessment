@@ -7,7 +7,6 @@ const products = [
     { id: 12, name: "4", price: 2600.00, image: "../images/dress6.jpg" }
 ];
 
-
 const productList = document.getElementById("product-list");
 
 function displayProducts(productArray) {
@@ -52,8 +51,4 @@ function addToCart(productId) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-
-
 displayProducts(products);
-
-
