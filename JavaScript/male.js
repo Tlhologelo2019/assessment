@@ -25,18 +25,30 @@ function displayProducts(productArray) {
     });
 }
 
+// A function that will display products based on filtering
+function filterByPrice() {
+    const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
+    const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+
+    const filteredProducts = products.filter(product => {
+        return product.price >= minPrice && product.price <= maxPrice;
+    });
+
+    displayProducts(filteredProducts);
+}
+
 function addToCart(productId) {
     const product = products.find(prod => prod.id === productId);
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Check if the product is already in the cart
+    // Here we check if the product is already in the cart
     const existingProduct = cart.find(item => item.id === productId);
     if (existingProduct) {
 
         alert(`${product.name} already in the cart!`);
 
     } else {
-        
+
         cart.push({...product, quantity: 1});
         alert(`${product.name} added to cart!`);
     }

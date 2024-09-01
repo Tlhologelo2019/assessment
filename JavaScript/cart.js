@@ -11,7 +11,7 @@ function displayCart() {
     cartItems.innerHTML = '';
     let total = 0;
 
-    if (cart.length === 0) {
+    if (cart.length === 0) {//we check if the  cart is empty or what
         cartItems.innerHTML = '<p>Your cart is empty</p>';
         cartSummary.style.display = 'none';
     } else {
@@ -27,7 +27,7 @@ function displayCart() {
                 <p>R${(item.price * item.quantity).toFixed(2)}</p>
                 <p>Quantity: ${item.quantity}</p>
                 <button onclick="addQuantity(${item.id})">Add</button>
-                <button onclick="removeFromCart(${item.id})" class="remove-button">Remove</button>
+                <button onclick="removeFromCart(${item.id})">Remove</button>
             `;
             cartItems.appendChild(cartItem);
 
